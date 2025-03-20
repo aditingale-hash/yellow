@@ -2,23 +2,17 @@ const plugin = require("tailwindcss/plugin");
 const colors = require("tailwindcss/colors");
 
 module.exports = {
-  prefix: 'tw-',
-  purge: {
-    enabled: true,
-    content: [
-      "./public/**/*.html",
-      "./public/*.html",
-      "./src/**/*.js",
-      "./src/*.js",
-      "./src/**/*.html",
-      "./src/*.html",
-      "./public/**/*.js",
-      "./public/*.js",
-    ],
-    options: {
-      safelist: [],
-    },
-  },
+  prefix: 'tw-',  // Only keep this if you are using 'tw-' in classes
+  content: [
+    "./public/**/*.html",
+    "./public/*.html",
+    "./src/**/*.{js,jsx,ts,tsx}",
+    "./src/*.js",
+    "./src/**/*.html",
+    "./src/*.html",
+    "./public/**/*.js",
+    "./public/*.js",
+  ],
   theme: {
     colors: {
       ...colors,
@@ -82,20 +76,6 @@ module.exports = {
       },
     },
   },
-  variants: [
-    "responsive",
-    "group-hover",
-    "focus-within",
-    "first",
-    "last",
-    "odd",
-    "even",
-    "hover",
-    "focus",
-    "active",
-    "visited",
-    "disabled",
-  ],
   plugins: [
     require("@tailwindcss/forms"),
     plugin(function ({ addComponents, theme }) {

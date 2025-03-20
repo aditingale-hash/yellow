@@ -21,7 +21,11 @@
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
     "scrollreveal": "^4.0.9",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "tailwindcss": "^3.0.0",
+"postcss": "^8.4.0",
+"autoprefixer": "^10.4.0"
+
   },
   "scripts": {
     "start": "react-scripts start",
